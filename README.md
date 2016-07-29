@@ -84,13 +84,20 @@ Usage
 const akoa = require('akoa')
 const co = require('co')
 
-akoa([
-  // Koa middleware
-  co.wrap(function * middleware01 (ctx, next) {
-    /* ... */
-    yield next()
-  })
-]).listen(3000)
+co(function * () {
+  let server = yield akoa([
+    // Koa middleware
+    co.wrap(function * middleware01 (ctx, next) {
+      /* ... */
+      yield next()
+    })
+  ]).listen(3000)
+
+  /* ... */
+
+  yield server.close()
+
+}).catch((err) => console.error(err))
 
 ```
 
