@@ -4,7 +4,7 @@
  */
 'use strict'
 
-const AKoa = require('../lib/AKoa.js')
+const AKoa = require('../lib/akoa.js')
 const aport = require('aport')
 const assert = require('assert')
 const co = require('co')
