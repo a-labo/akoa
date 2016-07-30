@@ -25,6 +25,7 @@ describe('akoa', function () {
   it('Akoa', () => co(function * () {
     assert.ok(server)
   }))
+
 })
 
 /* global describe, before, after, it */

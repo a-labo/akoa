@@ -8,12 +8,14 @@
 
 const create = require('./create')
 const AKoa = require('./akoa')
+const Router = require('./router')
 
 let lib = create.bind(this)
 
-Object.assign(lib, create, {
+Object.assign(lib, create, AKoa, {
   create,
-  AKoa
+  AKoa,
+  Router
 })
 
 module.exports = lib
