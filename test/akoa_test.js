@@ -23,9 +23,9 @@ describe('akoa', function () {
   }))
 
   it('Akoa', () => co(function * () {
+    assert.ok(AKoa.newRouter())
     assert.ok(server)
   }))
-
 })
 
 /* global describe, before, after, it */
