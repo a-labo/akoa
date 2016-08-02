@@ -1,6 +1,6 @@
 {
   "name": "akoa",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Async wrapper for koa server",
   "main": "lib",
   "scripts": {
