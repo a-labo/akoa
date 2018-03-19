@@ -6,25 +6,25 @@
 
 const exceptionMiddleware = require('../lib/middlewares/exception_middleware.js')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('exception-middleware', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Exception middleware', () => co(function * () {
+  it('Exception middleware', async () => {
     let middleware = exceptionMiddleware({})
-    yield middleware({}, () =>
+    await middleware({}, () =>
       new Promise((resolve, reject) => setTimeout(() => reject('failed!'), 200))
     )
-  }))
+  })
 })
 
 /* global describe, before, after, it */

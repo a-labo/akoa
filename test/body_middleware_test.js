@@ -6,23 +6,23 @@
 
 const bodyMiddleware = require('../lib/middlewares/body_middleware.js')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('body-middleware', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Body middleware', () => co(function * () {
+  it('Body middleware', async () => {
     let middleware = bodyMiddleware({})
     assert.ok(middleware)
-  }))
+  })
 })
 
 /* global describe, before, after, it */

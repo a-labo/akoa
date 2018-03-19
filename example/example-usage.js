@@ -6,19 +6,19 @@
 'use strict'
 
 const akoa = require('akoa')
-const co = require('co')
 
-co(function * () {
-  let server = yield akoa([
+void async function () {
+  const server = await akoa([
     // Koa middleware
-    co.wrap(function * middleware01 (ctx, next) {
+    async function middleware01 (ctx, next) {
       /* ... */
-      yield next()
-    })
+      await
+        next()
+    }
   ]).listen(3000)
 
   /* ... */
 
-  yield server.close()
+  await server.close()
 
-}).catch((err) => console.error(err))
+}().catch((err) => console.error(err))

@@ -7,25 +7,25 @@
 const AKoa = require('../lib/akoa.js')
 const aport = require('aport')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('akoa', function () {
   this.timeout(3000)
   let port, server
 
-  before(() => co(function * () {
-    port = yield aport()
-    server = yield new AKoa([]).listen(port)
-  }))
+  before(async () => {
+    port = await aport()
+    server = await new AKoa([]).listen(port)
+  })
 
-  after(() => co(function * () {
-    yield server.close()
-  }))
+  after(async () => {
+    await server.close()
+  })
 
-  it('Akoa', () => co(function * () {
+  it('Akoa', async () => {
     assert.ok(AKoa.newRouter())
     assert.ok(server)
-  }))
+  })
 })
 
 /* global describe, before, after, it */
