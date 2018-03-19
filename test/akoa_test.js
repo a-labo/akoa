@@ -6,8 +6,8 @@
 
 const AKoa = require('../lib/akoa.js')
 const aport = require('aport')
+const arequest = require('arequest')
 const assert = require('assert')
-
 
 describe('akoa', function () {
   this.timeout(3000)
