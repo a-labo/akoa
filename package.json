@@ -1,6 +1,6 @@
 {
   "name": "akoa",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Async wrapper for koa server",
   "main": "lib",
   "scripts": {
@@ -36,7 +36,7 @@
     "arequest": "^3.0.2",
     "coz": "^7.2.0",
     "injectmock": "^2.0.0",
-    "koa": "^2.11.0"
+    "koa": "^2.12.0"
   },
   "peerDependencies": {
     "koa": ">=2"
